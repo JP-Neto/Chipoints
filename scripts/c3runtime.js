@@ -4375,7 +4375,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Behaviors.Fade.Acts.StartFade,
-		C3.Plugins.System.Acts.ResetGlobals
+		C3.Plugins.System.Acts.ResetGlobals,
+		C3.Plugins.Sprite.Acts.SetCollisions
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4600,6 +4601,7 @@ self.C3_JsPropNameTable = [
 	{Resposta_C: 0},
 	{Resposta_D: 0},
 	{List_Combo: 0},
+	{seta: 0},
 	{FamiliaCoordenadas: 0},
 	{FamiliaChips: 0},
 	{Chip_A: 0},
@@ -4629,7 +4631,8 @@ self.C3_JsPropNameTable = [
 	{Combo_6: 0},
 	{Combo_7: 0},
 	{Combo_8: 0},
-	{cont_combo: 0}
+	{cont_combo: 0},
+	{tela: 0}
 ];
 
 self.InstanceType = {
@@ -4824,6 +4827,7 @@ self.InstanceType = {
 	Resposta_C: class extends self.ISpriteInstance {},
 	Resposta_D: class extends self.ISpriteInstance {},
 	List_Combo: class extends self.IListInstance {},
+	seta: class extends self.ISpriteInstance {},
 	FamiliaCoordenadas: class extends self.ISpriteInstance {},
 	FamiliaChips: class extends self.ISpriteInstance {},
 	Chip_A: class extends self.ISpriteInstance {},
@@ -4950,7 +4954,7 @@ self.C3_ExpressionFuncs = [
 			const v2 = p._GetNode(2).GetVar();
 			return () => f0(n1.ExpObject(v2.GetValue()));
 		},
-		() => 15,
+		() => 7,
 		() => 0,
 		() => "Chips",
 		p => {
@@ -4968,22 +4972,32 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 2,
 		() => "Resposta_Questões",
+		() => 3,
+		() => 4,
+		() => 5,
+		() => 6,
+		() => 8,
+		() => 9,
+		() => 10,
+		() => 11,
+		() => 12,
+		() => 13,
+		() => 14,
+		() => 15,
+		() => 16,
+		() => 17,
+		() => 18,
+		() => 19,
 		() => "Combos",
 		() => "combo_B1 (0)",
-		() => 3,
 		() => "combo_D1 (1)",
 		() => "combo_B9 (2)",
 		() => "combo_H3 (3)",
 		() => "combo_F6 (4)",
-		() => 4,
 		() => "combo_G9 (5)",
-		() => 5,
 		() => "combo_D4 (6)",
-		() => 6,
 		() => "combo_A4 (7)",
-		() => 7,
 		() => "combo_A7 (8)",
-		() => 8,
 		() => "Funções_Gerais",
 		() => 0.5,
 		() => 260,
